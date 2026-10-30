@@ -1,0 +1,8 @@
+{
+  "name": "Mahery Razafimanantsoa — Portfolio",
+  "short_name": "Mahery",
+  "icons": [{ "src": "./assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}

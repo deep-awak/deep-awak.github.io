@@ -1,73 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Portfolio - Mahery RAZAFIMANANTSOA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahery Razafimanantsoa - DevOps Engineer</title>
+  <meta name="description"
+    content="Portfolio de Mahery Razafimanantsoa : projets DevOps, automatisation, sécurité, compétences et parcours.">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <meta name="keywords"
+    content="DevOps, DevSecOps, Linux, Docker, CI/CD, GitHub Actions, FastAPI, Python, automatisation, portfolio">
+  <meta name="author" content="Mahery Razafimanantsoa">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="fr">
+  <link rel="canonical" href="https://deep-awak.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mahery Razafimanantsoa">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Mahery Razafimanantsoa - DevOps Engineer">
+  <meta property="og:description"
+    content="Portfolio de Mahery Razafimanantsoa : projets DevOps, automatisation, sécurité, compétences et parcours.">
+  <meta property="og:url" content="https://deep-awak.github.io/">
+  <meta property="og:image" content="https://deep-awak.github.io/assets/media/images/hero_1.png">
+  <meta property="og:image:alt" content="Portrait illustré de Mahery Razafimanantsoa">
+
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mahery Razafimanantsoa",
+    "jobTitle": "Aspiring DevOps & DevSecOps Engineer",
+    "url": "https://deep-awak.github.io/",
+    "email": "mailto:mahery.razafimanantsoa.dev@gmail.com",
+    "telephone": "+261389565390",
+    "sameAs": ["https://github.com/Deep-awak"],
+    "knowsAbout": ["DevOps", "DevSecOps", "Linux", "Docker", "CI/CD", "Python", "FastAPI"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT: '#FF5722', dark: '#E64A19' }, paper: '#F8F9FA' },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./css/main.css">
+
 </head>
+
 <body>
-    <header>
-        <div class="logo_item">
-            <i></i>
-            <span>Mahery</span>
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-gray-900 focus:px-4 focus:py-2 focus:text-white">Aller
+    au contenu</a>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur transition-shadow duration-300">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 md:px-8">
+      <div class="flex items-center gap-3">
+        <button id="menuToggle" type="button" class="flex flex-col gap-1.5 p-2 md:hidden" aria-expanded="false"
+          aria-controls="mobileMenu" aria-label="Ouvrir le menu">
+          <span class="block h-0.5 w-6 bg-gray-900"></span>
+          <span class="block h-0.5 w-4 bg-gray-900"></span>
+          <span class="block h-0.5 w-6 bg-gray-900"></span>
+        </button>
+        <a href="#accueil" class="group flex items-center gap-2" aria-label="Retour à l'accueil">
+          <span
+            class="h-6 w-2.5 -skew-x-[18deg] bg-brand transition-transform duration-300 group-hover:scale-y-125"></span>
+          <span class="text-xl font-black tracking-tight">MAHE<span class="text-brand">RY</span></span>
+        </a>
+      </div>
+
+      <nav class="hidden md:block" aria-label="Navigation principale">
+        <ul class="flex items-center gap-10 text-sm font-semibold text-gray-500">
+          <li><a href="#projets" class="nav-link inline-flex items-center gap-2" aria-label="Projets"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+              </svg>Projets</a></li>
+          <li><a href="#competences" class="nav-link inline-flex items-center gap-2" aria-label="Compétences"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 18l6-6-6-6" />
+                <path d="M8 6l-6 6 6 6" />
+                <path d="M14 4l-4 16" />
+              </svg>Compétences</a></li>
+          <li><a href="#parcours" class="nav-link inline-flex items-center gap-2" aria-label="Parcours"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+              </svg>Parcours</a></li>
+        </ul>
+      </nav>
+
+      <a href="./assets/docs/CV_Mahery_RAZAFIMANANTSOA.pdf" download
+        class="inline-flex items-center gap-2 rounded-md bg-gray-900 px-4 py-2.5 text-xs font-extrabold tracking-wider text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand"
+        aria-label="Télécharger mon CV">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12" />
+          <path d="M7 10l5 5 5-5" />
+          <path d="M4 20h16" />
+        </svg>
+        CV
+      </a>
+    </div>
+
+    <nav id="mobileMenu" class="hidden border-t border-gray-100 bg-white md:hidden" aria-label="Menu mobile">
+      <ul class="flex flex-col px-4 py-3 text-base font-semibold">
+        <li><a href="#projets" class="block py-3 text-gray-700 hover:text-brand">Projets</a></li>
+        <li><a href="#competences" class="block py-3 text-gray-700 hover:text-brand">Compétences</a></li>
+        <li><a href="#parcours" class="block py-3 text-gray-700 hover:text-brand">Parcours</a></li>
+        <li><a href="#contact" class="block py-3 text-gray-700 hover:text-brand">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="accueil" class="relative overflow-hidden pt-28 pb-16 md:flex md:min-h-screen md:items-center md:pb-20">
+      <div class="pointer-events-none absolute -right-32 top-24 h-72 w-72 rounded-full bg-orange-100/70 blur-3xl"
+        aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-gray-100 blur-3xl"
+        aria-hidden="true"></div>
+      <div class="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-8">
+        <div class="hero-stage hero-art relative mx-auto w-[min(78vw,390px)] md:w-[440px]">
+          <div class="hero-grid" aria-hidden="true"></div>
+          <div class="hero-ring" aria-hidden="true"></div>
+          <span class="hero-cross" aria-hidden="true">✳</span>
+          <span class="hero-orbit" aria-hidden="true"></span>
+          <span class="hero-orbit orbit-two" aria-hidden="true"></span>
+          <div class="hero-sun" aria-hidden="true"></div>
+          <img class="hero-img" src="./assets/media/images/full.png" alt="Illustration de Mahery" width="896"
+            height="1195">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="hero-copy text-center md:text-left">
+          <h1 class="reveal mt-6 text-6xl font-black uppercase leading-[0.9] tracking-tight sm:text-7xl lg:text-8xl">
+            Mahery<span class="hero-title-accent">.</span>
+          </h1>
+          <p class="reveal mt-3 text-sm font-semibold tracking-[0.35em] text-gray-500 sm:text-base">RAZAFIMANANTSOA</p>
+          <p class="reveal mt-6 text-xs font-extrabold tracking-[0.22em] text-brand sm:text-sm">ASPIRING DEVOPS &amp;
+            DEVSECOPS ENGINEER</p>
+          <p class="hero-role reveal mx-auto mt-6 md:mx-0">
+            Étudiant en informatique, passionné par l'automatisation, les systèmes et la sécurité.
+            Je transforme mes apprentissages en projets concrets : développer, conteneuriser,
+            tester et déployer des applications.
+          </p>
+          <p class="reveal mt-5 text-sm font-semibold text-gray-800">
+            « Le travail acharné ne sert à rien si l’on ne croit pas en soi. »
+          </p>
+          <div class="hero-actions reveal mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+            <a href="#projets"
+              class="inline-flex items-center gap-2 rounded-md bg-gray-900 px-5 py-3 text-xs font-extrabold tracking-wider text-white hover:bg-brand">
+              EXPLORER MES PROJETS <span aria-hidden="true">↘</span>
+            </a>
+            <a href="https://github.com/Deep-awak" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 rounded-md border border-gray-300 px-5 py-3 text-xs font-extrabold tracking-wider text-gray-900 hover:border-brand hover:text-brand">
+              GITHUB <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div
+            class="reveal mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-wider text-gray-400 md:justify-start">
+            <span>Python</span><span>Linux</span><span>Docker</span><span>CI/CD</span><span>Security</span>
+          </div>
+          <a href="#projets"
+            class="hero-scroll mx-auto mt-10 grid h-11 w-11 place-items-center rounded-full border border-gray-200 text-gray-900 transition hover:border-brand hover:text-brand md:mx-0"
+            aria-label="Voir les projets">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="bg-paper py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 md:px-8">
+        <header class="reveal mb-10 flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="text-xs font-bold tracking-[0.35em] text-brand">01 — PROJETS</p>
+            <h2 class="mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl">Mon laboratoire DevOps</h2>
+          </div>
+          <p class="hidden max-w-xs text-sm text-gray-500 md:block">Un laboratoire personnel : apprendre, construire,
+            tester et documenter.
+          </p>
+        </header>
+
+        <div class="reveal grid gap-8 md:grid-cols-12 md:items-center">
+          <div class="md:col-span-5 md:order-1">
+            <div class="flex items-end gap-3">
+              <span id="counter" class="text-7xl font-black leading-none">01</span>
+              <span class="pb-2 text-xl font-bold text-gray-400">/ <span id="counterTotal">04</span></span>
+            </div>
+            <div class="mt-3 h-1 w-16 bg-gray-900"></div>
+
+            <div class="mt-5 flex items-center gap-4 text-sm font-semibold text-gray-500">
+              <span id="rank">#1</span>
+              <span id="featStars" class="project-status text-xs font-bold text-orange-600"
+                aria-label="Statut du projet">Sprint de la semaine</span>
+            </div>
+
+            <h3 id="featTitle" class="mt-6 text-3xl font-black uppercase leading-tight md:text-4xl">Pixel Runner</h3>
+            <span id="featStatus"
+              class="mt-3 inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">Prioritaire</span>
+
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a id="featDemo" href="#projets"
+                class="inline-flex items-center gap-2 rounded-md bg-gray-900 px-5 py-3 text-xs font-extrabold tracking-wider text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand">
+                <span aria-hidden="true">↗</span> DÉMO À VENIR
+              </a>
+              <a id="featCode" href="https://github.com/Deep-awak" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-2 rounded-md border-2 border-gray-900 px-5 py-3 text-xs font-extrabold tracking-wider text-gray-900 transition duration-200 hover:border-brand hover:text-brand">
+                <span aria-hidden="true">⌘</span> GITHUB
+              </a>
+              <button id="favBtn" type="button" aria-pressed="false"
+                class="grid h-12 w-12 place-items-center rounded-full border border-gray-300 text-lg text-gray-700 transition hover:scale-110 hover:border-brand hover:text-brand"
+                aria-label="Ajouter à ma liste">♡</button>
+            </div>
+          </div>
+
+          <!-- Colonne droite : visuel -->
+          <div id="featVisual" class="relative md:col-span-7 md:order-2">
+            <div class="relative aspect-[16/10] overflow-hidden rounded-3xl shadow-2xl">
+              <div id="featBg" class="absolute inset-0 transition-[background] duration-700"
+                style="background: linear-gradient(135deg,#FF5722 0%,#FF8A65 45%,#263238 100%)"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+                aria-hidden="true"></div>
+
+              <a id="featPlay" href="#"
+                class="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-gray-900 shadow-lg transition duration-300 hover:scale-110 hover:bg-white"
+                aria-label="Voir le projet">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </a>
+
+              <button id="prevBtn" type="button"
+                class="absolute left-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-gray-900 shadow transition hover:scale-110"
+                aria-label="Projet précédent">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" />
+                </svg>
+              </button>
+              <button id="nextBtn" type="button"
+                class="absolute right-4 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-gray-900 shadow transition hover:scale-110"
+                aria-label="Projet suivant">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+
+              <div class="absolute inset-x-6 bottom-6">
+                <p class="text-xs font-bold tracking-[0.3em] text-white/80">PROJET EN VEDETTE</p>
+                <p id="featTitleOverlay" class="mt-1 text-4xl font-black uppercase text-white drop-shadow md:text-5xl">
+                  Pixel Runner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grille asymétrique : synopsis + stack -->
+        <div class="reveal mt-12 grid gap-6 md:grid-cols-3">
+          <article class="lift rounded-3xl border border-gray-200 bg-white p-7 hover:border-brand/40 md:col-span-2">
+            <p class="text-xs font-bold tracking-[0.3em] text-brand">SYNOPSIS</p>
+            <p id="featSynopsis" class="mt-4 text-lg leading-loose text-gray-700"></p>
+            <p id="featGoal" class="mt-4 text-sm leading-relaxed text-gray-400"></p>
+          </article>
+
+          <article class="lift rounded-3xl bg-gray-900 p-7 text-white hover:shadow-brand/30">
+            <p class="text-xs font-bold tracking-[0.3em] text-brand">STACK TECHNIQUE</p>
+            <ul id="featStack" class="mt-5 flex flex-wrap gap-2"></ul>
+          </article>
+        </div>
+
+        <div id="thumbs" class="reveal mt-6 grid grid-cols-2 gap-4 md:grid-cols-6"></div>
+      </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section id="competences" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 md:px-8">
+        <header class="reveal mb-12">
+          <p class="text-xs font-bold tracking-[0.35em] text-brand">02 — COMPÉTENCES</p>
+          <h2 class="mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl">Mon équipement</h2>
+        </header>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="reveal lift rounded-3xl border border-gray-200 p-7">
+            <p class="text-xs font-bold tracking-[0.25em] text-brand">BASES TECHNIQUES</p>
+            <h3 class="mt-3 text-lg font-black">Développement</h3>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Python</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">JavaScript</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">TypeScript</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Node.js</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">React</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">SQL</li>
             </ul>
-        </nav>
-        <div class="btn_item">
-            <a href="./assets/docs/CV_Mahery_RAZAFIMANANTSOA.pdf">
-                <i></i>
-                <span>Download CV</span>
-            </a>
-            <a href="tel:+261389565390">
-                <i></i>
-                <span>Call</span>
-            </a>
+          </article>
+          <article class="reveal lift rounded-3xl border border-gray-200 p-7">
+            <p class="text-xs font-bold tracking-[0.25em] text-brand">LABORATOIRE DEVOPS</p>
+            <h3 class="mt-3 text-lg font-black">En pratique</h3>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="rounded-full bg-orange-50 px-3 py-1.5 text-sm font-semibold text-orange-700">Git / GitHub</li>
+              <li class="rounded-full bg-orange-50 px-3 py-1.5 text-sm font-semibold text-orange-700">Linux · Bash</li>
+              <li class="rounded-full bg-orange-50 px-3 py-1.5 text-sm font-semibold text-orange-700">Docker</li>
+              <li class="rounded-full bg-orange-50 px-3 py-1.5 text-sm font-semibold text-orange-700">GitHub Actions
+              </li>
+              <li class="rounded-full bg-orange-50 px-3 py-1.5 text-sm font-semibold text-orange-700">pytest</li>
+            </ul>
+          </article>
+          <article class="reveal lift rounded-3xl border border-gray-200 p-7">
+            <p class="text-xs font-bold tracking-[0.25em] text-brand">EXPLORATION</p>
+            <h3 class="mt-3 text-lg font-black">Axes d'apprentissage</h3>
+            <ul class="mt-5 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">DevSecOps</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Terraform</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Prometheus</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Grafana</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Blender / bpy</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-semibold">Game development</li>
+            </ul>
+          </article>
         </div>
-    </header>
-    <main>
-        <section id="home" class="hero_item">
-            <div class="welcome_item">
-                <h1>Mahery RAZAFIMANANTSOA</h1>
-                <p class="slogan">Je developpe pour mon plaisir et sortir le meilleur de moi même. Votre projet est dans le bon main</p>
-                <div class="action_btn">
-                    <a href=""><i></i>Cover my project</a>
-                    <a href=""><i></i>Call Now</a>
-                </div>
-            </div>
-            <div class="image_item">
-                <div class="img">
-                    <img src="./assets/media/images/" alt="Mahery RAZAFIMANANTSOA">
-                </div>
-                <div class="icon_social">
-                    <span><i></i></span> <!--Facebook-->
-                    <span><i></i></span> <!--Linkedin-->
-                    <span><i></i></span><!--Youtube-->
-                </div>
-            </div>
-        </section>
-        <section id="about" class="about_item">
-            
-        </section>
-        <section id="project" class="project_item">
+      </div>
+    </section>
 
-        </section>
-        <section id="contact" class="contact_item">
+    <!-- ============ PARCOURS ============ -->
+    <section id="parcours" class="bg-paper py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 md:px-8">
+        <header class="reveal mb-12">
+          <p class="text-xs font-bold tracking-[0.35em] text-brand">03 — PARCOURS</p>
+          <h2 class="mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl">Les chapitres</h2>
+        </header>
 
-        </section>
-    </main>
-    <footer>
-        <div class="logo_sociaux_item"></div>
-        <div class="navigation_item"></div>
-        <div class="action_item"></div>
-    </footer>
-    <script src="./js/index.js" defer></script>
+        <ol class="grid gap-6 md:grid-cols-3">
+          <li class="reveal lift rounded-3xl bg-white p-7">
+            <time class="text-xs font-bold tracking-widest text-brand">2024 — 2027</time>
+            <h3 class="mt-3 text-lg font-black">Licence Informatique · HEI</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-500">Programmation d’applications, réseaux, CI/CD, sécurité
+              informatique, algorithmique et gestion de projet.</p>
+          </li>
+          <li class="reveal lift rounded-3xl bg-white p-7">
+            <time class="text-xs font-bold tracking-widest text-brand">Août — Octobre 2024</time>
+            <h3 class="mt-3 text-lg font-black">Stage · Admin. système &amp; réseau · VetClinic</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-500">Maintenance, disponibilité et sécurité du système
+              d’information au quotidien.</p>
+          </li>
+          <li class="reveal lift rounded-3xl bg-white p-7">
+            <time class="text-xs font-bold tracking-widest text-brand">2023 — 2024</time>
+            <h3 class="mt-3 text-lg font-black">Année préparatoire · PNM</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-500">Bases de l’informatique bureautique, algorithmique et
+              gestion de projet.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT (bas de page façon « Only on ») ============ -->
+    <section id="contact" class="relative overflow-hidden py-20 md:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 md:grid-cols-2 md:px-8">
+        <div class="reveal">
+          <div class="flex items-center gap-6 text-gray-500">
+            <a href="https://github.com/Deep-awak" target="_blank" rel="noopener"
+              class="transition hover:-translate-y-0.5 hover:text-brand" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+              class="transition hover:-translate-y-0.5 hover:text-brand" aria-label="LinkedIn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+              </svg>
+            </a>
+            <a href="mailto:mahery.razafimanantsoa.dev@gmail.com"
+              class="transition hover:-translate-y-0.5 hover:text-brand" aria-label="Envoyer un e-mail">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 7l9 6 9-6" />
+              </svg>
+            </a>
+          </div>
+
+          <p class="mt-10 text-xs font-bold tracking-[0.35em] text-brand">04 — CONTACT</p>
+          <h2 class="mt-3 text-4xl font-black uppercase leading-tight tracking-tight md:text-5xl">Lançons la prochaine
+            partie.</h2>
+          <p class="mt-6 max-w-md text-base leading-loose text-gray-500">Disponible pour un stage ou des missions
+            freelance. Écrivez-moi, je réponds rapidement.</p>
+
+          <div class="mt-8 space-y-3 text-sm font-semibold">
+            <a href="tel:+261389565390" class="block text-gray-700 transition hover:text-brand">+261 38 95 653 90</a>
+            <a href="mailto:mahery.razafimanantsoa.dev@gmail.com"
+              class="block text-gray-700 transition hover:text-brand">mahery.razafimanantsoa.dev@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="reveal relative mx-auto w-full max-w-sm">
+          <div class="relative ml-auto w-[88%] overflow-hidden rounded-2xl bg-paper shadow-xl">
+            <img src="./assets/media/images/hero_1.png" alt="Portrait de Mahery en style illustré" loading="lazy"
+              class="h-auto w-full object-cover" width="1086" height="1448">
+          </div>
+          <div
+            class="lift absolute -left-2 bottom-12 w-56 -skew-x-[12deg] bg-gray-900 px-6 py-4 text-white md:-left-10">
+            <div class="skew-x-[12deg]">
+              <p class="text-xs font-bold tracking-widest text-white/60">DISPONIBILITÉ</p>
+              <p class="mt-1 text-lg font-black">Stage · Freelance</p>
+              <a href="mailto:mahery.razafimanantsoa.dev@gmail.com"
+                class="mt-3 inline-flex items-center gap-2 text-xs font-extrabold tracking-wider text-brand transition hover:text-white">
+                ME CONTACTER <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="relative overflow-hidden border-t border-gray-100 bg-white">
+    <div class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-brand/10 blur-3xl"
+      aria-hidden="true"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 md:px-8">
+      <div
+        class="flex flex-col items-start justify-between gap-8 border-b border-gray-100 py-14 md:flex-row md:items-center">
+        <div>
+          <p class="text-xs font-bold tracking-[0.35em] text-brand">DISPONIBLE</p>
+          <h2 class="mt-3 text-3xl font-black uppercase leading-tight tracking-tight md:text-4xl">Lançons la prochaine
+            partie.</h2>
+          <p class="mt-3 max-w-md text-sm leading-relaxed text-gray-500">Stage ou mission freelance en DevOps :
+            écrivez-moi, je réponds rapidement.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="mailto:mahery.razafimanantsoa.dev@gmail.com"
+            class="inline-flex items-center gap-2 rounded-md bg-gray-900 px-6 py-3.5 text-xs font-extrabold tracking-wider text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand">
+            ME CONTACTER <span aria-hidden="true">→</span>
+          </a>
+          <a href="./assets/docs/CV_Mahery_RAZAFIMANANTSOA.pdf" download
+            class="inline-flex items-center gap-2 rounded-md border-2 border-gray-900 px-6 py-3.5 text-xs font-extrabold tracking-wider text-gray-900 transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:text-brand">
+            TÉLÉCHARGER LE CV
+          </a>
+        </div>
+      </div>
+
+      <div class="grid gap-10 py-12 md:grid-cols-3 md:items-start">
+        <div>
+          <a href="#accueil" class="group inline-flex items-center gap-2" aria-label="Retour en haut de page">
+            <span
+              class="h-6 w-2.5 -skew-x-[18deg] bg-brand transition-transform duration-300 group-hover:scale-y-125"></span>
+            <span class="text-xl font-black tracking-tight">MAHE<span class="text-brand">RY</span></span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-gray-500">Développeur DevOps &amp; DevSecOps.
+            Automatisation, conteneurs et sécurité.</p>
+        </div>
+
+        <nav aria-label="Navigation du pied de page">
+          <p class="text-xs font-bold tracking-[0.3em] text-gray-400">NAVIGATION</p>
+          <ul class="mt-5 grid grid-cols-2 gap-x-8 gap-y-3 text-sm font-semibold text-gray-600">
+            <li><a href="#accueil" class="transition hover:text-brand">Accueil</a></li>
+            <li><a href="#projets" class="transition hover:text-brand">Projets</a></li>
+            <li><a href="#competences" class="transition hover:text-brand">Compétences</a></li>
+            <li><a href="#parcours" class="transition hover:text-brand">Parcours</a></li>
+            <li><a href="#contact" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="#top" class="transition hover:text-brand">Retour en haut ↑</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="text-xs font-bold tracking-[0.3em] text-gray-400">RÉSEAUX</p>
+          <ul class="mt-5 flex items-center gap-3">
+            <li>
+              <a href="https://github.com/Deep-awak" target="_blank" rel="noopener" aria-label="GitHub"
+                class="grid h-11 w-11 place-items-center rounded-full border border-gray-200 text-gray-700 transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mahery-razafimanantsoa-dev" target="_blank" rel="noopener" aria-label="LinkedIn"
+                class="grid h-11 w-11 place-items-center rounded-full border border-gray-200 text-gray-700 transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:mahery.razafimanantsoa.dev@gmail.com" aria-label="Envoyer un e-mail"
+                class="grid h-11 w-11 place-items-center rounded-full border border-gray-200 text-gray-700 transition duration-200 hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="M3 7l9 6 9-6" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-between gap-3 border-t border-gray-100 py-6 text-xs font-semibold text-gray-400 md:flex-row">
+        <p>© <span data-year></span> Mahery Razafimanantsoa. Tous droits réservés.</p>
+        <p class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-brand"></span>
+          Conçu avec soin
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('[data-year]').forEach((el) => {
+        el.textContent = new Date().getFullYear();
+      });
+    </script>
+  </footer>
+  <script src="./js/main.js" type="module"></script>
 </body>
+
 </html>
