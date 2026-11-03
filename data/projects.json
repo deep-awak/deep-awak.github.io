@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "deep-awak-github-io",
+      "title": "deep awak.github.io",
+      "status": "En cours",
+      "repo": "https://github.com/deep-awak/deep-awak.github.io",
+      "demo": "https://deep-awak.github.io/",
+      "description": "DevOps portfolio of Mahery Razafimanantsoa: Docker deployments, CI/CD, system and network administration, Python and PostgreSQL data pipelines, plus React and Next.js web apps.",
+      "goal": "Présenter mon parcours, mes choix techniques et mes projets en DevOps, développement web et data. Ce portfolio met en avant mes compétences de base en HTML, CSS, JavaScript et Tailwind CSS.",
+      "stack": [
+        "HTML",
+        "portfolio",
+        "portfolio-site",
+        "portfolio-website"
+      ],
+      "cover": "./assets/media/covers/screenshot-from-2026-11-03-02-48-33-1793713729.png",
+      "visible": true
+    },
+    {
       "id": "linux-pulse",
       "title": "Linux pulse",
       "status": "Terminé",
