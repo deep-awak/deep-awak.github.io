@@ -4,13 +4,11 @@
     const pad = (n) => String(n).padStart(2, '0');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Projets proposés pour un sprint personnel de 7 jours.
-    // Ils restent "à construire" tant que les dépôts, tests et démonstrations ne sont pas publiés.
     const PROJECTS = [
         {
             title: 'Linux Pulse', status: 'À construire · Jour 1',
             grad: 'linear-gradient(135deg,#111827 0%,#374151 55%,#FF5722 100%)',
-            image: './assets/media/images/projet_1.png',
+            image: './assets/media/images/Linux_Pulse.jpeg',
             synopsis: 'Un script Bash qui collecte les informations essentielles d’une machine Linux : charge CPU, mémoire, espace disque, uptime et état de quelques services. Il génère un rapport lisible dans le terminal et dans un fichier.',
             goal: 'Livrable de la semaine : script documenté, exemples de sortie, gestion des erreurs et instructions pour le lancer.',
             stack: ['Linux', 'Bash', 'ShellCheck', 'Git'],
