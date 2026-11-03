@@ -1,18 +1,5 @@
 {
   "projects": [
-    {
-      "id": "linux-pulse",
-      "title": "Linux pulse",
-      "status": "Terminé",
-      "repo": "https://github.com/deep-awak/Linux_pulse",
-      "demo": "",
-      "description": "Linux Pulse is a Bash health-check script for Linux machines. It reports CPU load, memory, disk usage, uptime and service status, flags warnings and critical thresholds, and saves timestamped text reports",
-      "goal": "",
-      "stack": [
-        "Shell"
-      ],
-      "cover": "",
-      "visible": true
-    }
+    
   ]
 }
