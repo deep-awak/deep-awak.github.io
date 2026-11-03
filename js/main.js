@@ -14,7 +14,7 @@
             synopsis: 'Un script Bash qui collecte les informations essentielles d’une machine Linux : charge CPU, mémoire, espace disque, uptime et état de quelques services. Il génère un rapport lisible dans le terminal et dans un fichier.',
             goal: 'Livrable de la semaine : script documenté, exemples de sortie, gestion des erreurs et instructions pour le lancer.',
             stack: ['Linux', 'Bash', 'ShellCheck', 'Git'],
-            demo: null, code: 'https://github.com/Deep-awak'
+            demo: null, code: 'https://github.com/deep-awak/Linux_pulse'
         },
         {
             title: 'Containerized API', status: 'À construire · Jours 2–3',
