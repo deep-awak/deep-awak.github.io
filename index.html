@@ -134,62 +134,60 @@
   </header>
 
   <main id="main">
-    <section id="accueil" class="relative overflow-hidden pt-28 pb-16 md:flex md:min-h-screen md:items-center md:pb-20">
-      <div class="pointer-events-none absolute -right-32 top-24 h-72 w-72 rounded-full bg-orange-100/70 blur-3xl"
-        aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-gray-100 blur-3xl"
-        aria-hidden="true"></div>
-      <div class="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-8">
-        <div class="hero-stage hero-art relative mx-auto w-[min(78vw,390px)] md:w-[440px]">
-          <div class="hero-grid" aria-hidden="true"></div>
-          <div class="hero-ring" aria-hidden="true"></div>
-          <span class="hero-cross" aria-hidden="true">✳</span>
-          <span class="hero-orbit" aria-hidden="true"></span>
-          <span class="hero-orbit orbit-two" aria-hidden="true"></span>
-          <div class="hero-sun" aria-hidden="true"></div>
-          <img class="hero-img" src="./assets/media/images/full.png" alt="Illustration de Mahery" width="896"
-            height="1195">
-        </div>
-        <div class="hero-copy text-center md:text-left">
-          <h1 class="reveal mt-6 text-6xl font-black uppercase leading-[0.9] tracking-tight sm:text-7xl lg:text-8xl">
-            Mahery<span class="hero-title-accent">.</span>
-          </h1>
-          <p class="reveal mt-3 text-sm font-semibold tracking-[0.35em] text-gray-500 sm:text-base">RAZAFIMANANTSOA</p>
-          <p class="reveal mt-6 text-xs font-extrabold tracking-[0.22em] text-brand sm:text-sm">ASPIRING DEVOPS &amp;
-            DEVSECOPS ENGINEER</p>
-          <p class="hero-role reveal mx-auto mt-6 md:mx-0">
-            Étudiant en informatique, passionné par l'automatisation, les systèmes et la sécurité.
-            Je transforme mes apprentissages en projets concrets : développer, conteneuriser,
-            tester et déployer des applications.
-          </p>
-          <p class="reveal mt-5 text-sm font-semibold text-gray-800">
-            « Le travail acharné ne sert à rien si l’on ne croit pas en soi. »
-          </p>
-          <div class="hero-actions reveal mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-            <a href="#projets"
-              class="inline-flex items-center gap-2 rounded-md bg-gray-900 px-5 py-3 text-xs font-extrabold tracking-wider text-white hover:bg-brand">
-              EXPLORER MES PROJETS <span aria-hidden="true">↘</span>
-            </a>
-            <a href="https://github.com/Deep-awak" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-2 rounded-md border border-gray-300 px-5 py-3 text-xs font-extrabold tracking-wider text-gray-900 hover:border-brand hover:text-brand">
-              GITHUB <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <div
-            class="reveal mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-wider text-gray-400 md:justify-start">
-            <span>Python</span><span>Linux</span><span>Docker</span><span>CI/CD</span><span>Security</span>
-          </div>
-          <a href="#projets"
-            class="hero-scroll mx-auto mt-10 grid h-11 w-11 place-items-center rounded-full border border-gray-200 text-gray-900 transition hover:border-brand hover:text-brand md:mx-0"
-            aria-label="Voir les projets">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </a>
-        </div>
+<section id="accueil" class="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#ff9d76] text-white">
+  <!-- Cercles décoratifs d'arrière-plan -->
+  <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+    <div class="h-[450px] w-[450px] rounded-full border border-white/20 sm:h-[600px] sm:w-[600px]"></div>
+    <div class="absolute h-[320px] w-[320px] rounded-full border border-white/30 sm:h-[420px] sm:w-[420px]"></div>
+  </div>
+
+  <!-- Conteneur Principal -->
+  <div class="relative z-10 flex w-full max-w-7xl flex-col items-center justify-center px-4 text-center">
+    
+    <!-- Grand Titre en Arrière-plan de l'image -->
+    <h1 class="pointer-events-none absolute select-none text-[18vw] font-black uppercase leading-none tracking-tight text-white/90 sm:text-[15vw]">
+      MAHERY
+    </h1>
+
+    <!-- Image Personnage Centrée -->
+    <div class="relative z-10 my-4 max-w-[280px] drop-shadow-2xl sm:max-w-[360px] md:max-w-[420px]">
+      <img 
+        src="./assets/media/images/full.png" 
+        alt="Illustration de Mahery" 
+        class="h-auto w-full object-contain"
+      />
+    </div>
+
+    <!-- Contenu Texte Concis sous la photo -->
+    <div class="relative z-20 max-w-xl">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-white/80 sm:text-sm">
+        RAZAFIMANANTSOA
+      </p>
+      
+      <p class="mt-2 text-sm font-extrabold tracking-widest text-gray-900 sm:text-base">
+        ASPIRING DEVOPS &amp; DEVSECOPS ENGINEER
+      </p>
+
+      <!-- Actions / Boutons -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+        <a 
+          href="#projets" 
+          class="rounded-full bg-gray-900 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-lg transition hover:bg-black hover:scale-105"
+        >
+          Voir mes projets
+        </a>
+        <a 
+          href="https://github.com/Deep-awak" 
+          target="_blank" 
+          rel="noopener" 
+          class="rounded-full border-2 border-white/80 bg-white/10 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md transition hover:bg-white hover:text-gray-900 hover:scale-105"
+        >
+          GitHub ↗
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section id="projets" class="bg-paper py-20 md:py-28">
       <div class="mx-auto max-w-7xl px-4 md:px-8">
