@@ -13,6 +13,30 @@
       ],
       "cover": "./assets/media/covers/linux-pulse-1793696157.jpeg",
       "visible": true
+    },
+    {
+      "id": "aqi-dashboard-frontend",
+      "title": "aqi dashboard frontend",
+      "status": "En cours",
+      "repo": "https://github.com/deep-awak/aqi-dashboard-frontend",
+      "demo": "https://deep-awak.github.io/aqi-dashboard-frontend/",
+      "description": "Tableau de bord web de la qualité de l’air à Madagascar. Il affiche les niveaux AQI et les particules fines par région, avec une carte, des graphiques de tendances, un classement des régions, la comparaison semaine / week-end et les analyses IA.",
+      "goal": "Montrer une chaîne complète, de la donnée brute à la décision : collecte automatique, nettoyage et modélisation en base, API REST, visualisation et analyses IA. Contrainte résolue : le quota gratuit d'une IA ne peut pas être partagé par tous les visiteurs. Les analyses sont donc générées une fois par jour puis stockées, et chaque visiteur peut poser ses propres questions avec sa clé API.",
+      "stack": [
+        "React",
+        "Vite",
+        "Recharts",
+        "Leaflet",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Gemini",
+        "DeepSeek",
+        "GitHub Pages",
+        "Render"
+      ],
+      "cover": "./assets/media/covers/screenshot-from-2026-11-03-00-52-05-1793706741.png",
+      "visible": true
     }
   ]
 }
